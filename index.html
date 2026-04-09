@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gassan & Tarez Engagement</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--gold:#c5a059;
+--dark:#1a1a1a;
+--white:#ffffff;
+}
+
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:'Montserrat',sans-serif;
+background:#f9f9f9;
+color:var(--dark);
+text-align:center;
+scroll-behavior:smooth;
+}
+
+.hero{
+min-height:100vh;
+padding:20px;
+background:url('img1.png') center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+align-items:center;
+color:white;
+text-shadow:2px 2px 10px rgba(0,0,0,0.5);
+padding-bottom:80px;
+}
+
+.hero-content{
+background:rgba(0,0,0,0.35);
+padding:30px 40px;
+border-radius:10px;
+backdrop-filter:blur(4px);
+}
+
+.hero h1{
+font-family:'Great Vibes',cursive;
+font-size:clamp(3rem,12vw,5rem);
+margin:0;
+}
+
+.hero p{
+font-family:'Cinzel',serif;
+font-size:clamp(.9rem,3vw,1.3rem);
+letter-spacing:3px;
+margin:10px 0;
+}
+
+.hero-date{
+font-size:1.2rem;
+font-family:'Cinzel';
+margin-top:10px;
+}
+
+.venue-name{
+font-family:'Cinzel',serif;
+font-size:1.1rem;
+letter-spacing:2px;
+color:var(--gold);
+margin:25px 0 10px;
+font-weight:700;
+}
+
+.section{
+padding:20px 16px;
+max-width:480px;
+margin:auto;
+}
+
+.timeline{
+border-left:2px solid var(--gold);
+margin:20px auto;
+width:fit-content;
+text-align:left;
+padding-left:30px;
+}
+
+.timeline-item{
+position:relative;
+margin-bottom:20px;
+}
+
+.timeline-item::before{
+content:'';
+position:absolute;
+left:-37px;
+top:5px;
+width:12px;
+height:12px;
+background:var(--gold);
+border-radius:50%;
+}
+
+.countdown-title{
+font-family:'Cinzel',serif;
+font-size:1.1rem;
+letter-spacing:3px;
+margin-top:30px;
+font-weight:700;
+}
+
+#countdown{
+direction:ltr;
+display:flex;
+justify-content:center;
+gap:15px;
+margin:20px 0;
+padding:20px;
+background:#111;
+border-radius:8px;
+color:var(--gold);
+font-family:'Cinzel',serif;
+}
+
+.count-item{
+display:flex;
+flex-direction:column;
+align-items:center;
+font-size:2rem;
+font-weight:bold;
+min-width:60px;
+}
+
+.count-label{
+font-size:.6rem;
+color:#999;
+letter-spacing:2px;
+margin-top:5px;
+}
+
+.logoCH{
+max-width:200px;
+margin:10px 0;
+}
+
+iframe{
+width:100%;
+height:320px;
+border:0;
+border-radius:10px;
+margin-top:15px;
+}
+
+.nav-buttons{
+margin-top:15px;
+}
+
+.nav-buttons a{
+display:block;
+padding:12px;
+margin-bottom:10px;
+border-radius:6px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+background:black;
+}
+
+.rsvp-form{
+background:white;
+padding:24px 20px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+text-align:right;
+}
+
+.rsvp-form label{
+display:block;
+font-size:.85rem;
+margin-top:16px;
+margin-bottom:4px;
+color:#555;
+}
+
+.rsvp-form input,
+.rsvp-form select{
+width:100%;
+padding:15px;
+border:1px solid #ddd;
+border-radius:5px;
+font-size:1rem;
+}
+
+.rsvp-form button{
+width:100%;
+padding:15px;
+margin-top:20px;
+background:var(--gold);
+color:white;
+font-weight:bold;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size:1rem;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    <div class="hero-content">
+        <h1>Gassan & Tarez</h1>
+        <p>ARE GETTING ENGAGED</p>
+        <div class="hero-date">
+            21.04.2026<br>
+            Tuesday | 19:00
+        </div>
+    </div>
+</div>
+
+<div class="venue-name">
+    At Carmel Events Haifa
+</div>
+
+<div class="section">
+    <h2 style="font-family:'Cinzel'">ENGAGEMENT DAY</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <strong>19:00 - 20:00</strong><br>
+            Reception & DJ Set
+        </div>
+        <div class="timeline-item">
+            <strong>20:00 - 20:30</strong><br>
+            Engagement Ceremony
+        </div>
+        <div class="timeline-item">
+            <strong>20:30 - Late</strong><br>
+            Main Event with
+            <a href="https://www.instagram.com/alaa_akr/" target="_blank" style="color:var(--gold);text-decoration:none">
+                <strong>Alaa Akar</strong>
+            </a>
+        </div>
+    </div>
+
+    <div class="countdown-title">UNTIL THE BIG DAY</div>
+    <div id="countdown">
+        <div class="count-item"><span id="days">00</span><span class="count-label">Days</span></div>
+        <div class="count-item"><span id="hours">00</span><span class="count-label">Hours</span></div>
+        <div class="count-item"><span id="minutes">00</span><span class="count-label">Mins</span></div>
+        <div class="count-item"><span id="seconds">00</span><span class="count-label">Secs</span></div>
+    </div>
+</div>
+
+<div class="section">
+    <img src="LogoCH.png" class="logoCH">
+    <h3 style="font-family:'Cinzel';letter-spacing:3px">Carmel Events Haifa</h3>
+    <p>הרב פרץ חיות 3, חיפה</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.1111!2d34.9912!3d32.8191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDQ5JzA4LjgiTiAzNMKwNTknMjguMyJF!5e0!3m2!1she!2sil!4v1" loading="lazy"></iframe>
+    <div class="nav-buttons">
+        <a href="https://waze.com/ul?q=הרב%20פרץ%20חיות%203%20חיפה&navigate=yes" target="_blank">נווט עם Waze</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=הרב+פרץ+חיות+3+חיפה" target="_blank">פתח ב-Google Maps</a>
+    </div>
+</div>
+
+<div class="section">
+    <h2 style="font-family:'Cinzel'">We can't wait to celebrate!</h2>
+    <p>Kindly complete the RSVP form below</p>
+    <div class="rsvp-form" id="rsvp-container">
+        <label>الاسم الكامل / שם מלא *</label>
+        <input type="text" id="name" placeholder="أدخل اسمك الكامل">
+        
+        <label>هل ستتمكن من الحضور؟ / האם תגיע/י?</label>
+        <select id="attendance">
+            <option value="כן, אני מגיע/ה">نعم، سأחضر / כן, אני מגיע/ה</option>
+            <option value="לצערי לא אוכל להגיע">آסף، לנ אטמכן / לצערי לא אוכל להגיע</option>
+        </select>
+
+        <label>عدد الأشخاص / כמות אנשים</label>
+        <input type="number" id="guests" min="1" max="10" value="1">
+        
+        <button onclick="submitRSVP()">إرسال / שלח</button>
+    </div>
+</div>
+
+<div class="section">
+    <img src="final_design.png" style="width:100%">
+</div>
+
+<script>
+// Countdown Timer
+const targetDate = new Date(2026,3,21,19,0,0).getTime();
+setInterval(function(){
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+    if(diff < 0){
+        document.getElementById("countdown").innerHTML="🎉 IT'S TIME!";
+        return;
+    }
+    document.getElementById("days").innerHTML=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("hours").innerHTML=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+    document.getElementById("minutes").innerHTML=Math.floor((diff%(1000*60*60))/(1000*60));
+    document.getElementById("seconds").innerHTML=Math.floor((diff%(1000*60))/1000);
+},1000);
+
+// RSVP Submission to Google Sheets ONLY
+function submitRSVP(){
+    const name = document.getElementById("name").value.trim();
+    const attendance = document.getElementById("attendance").value;
+    let guests = document.getElementById("guests").value;
+
+    if(!name){
+        alert("נא להזין שם מלא / الرجاء إدخال الاسم");
+        return;
+    }
+
+    if(attendance.includes("לא")){
+        guests = 0;
+    }
+
+    // הדבק את ה-Web App URL שלך כאן למטה
+    const scriptURL = 'כאן_מדביקים_את_הכתובת_שלך';
+
+    const btn = document.querySelector(".rsvp-form button");
+    btn.innerText = "...שולח / جاري الإرسال";
+    btn.disabled = true;
+
+    fetch(scriptURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: JSON.stringify({
+            name: name,
+            attendance: attendance,
+            guests: guests
+        })
+    })
+    .then(() => {
+        // הצגת הודעת הצלחה במקום הטופס
+        document.getElementById("rsvp-container").innerHTML = `
+            <div style="text-align:center; padding:20px; color:var(--gold); font-weight:bold;">
+                <h3>תודה! תשובתך התקבלה</h3>
+                <p>شكراً، تم استلام ردك بنجاح</p>
+            </div>
+        `;
+    })
+    .catch(error => {
+        console.error('Error!', error.message);
+        alert("אירעה שגיאה. נסה שוב.");
+        btn.innerText = "إرسאל / שלח";
+        btn.disabled = false;
+    });
+}
+</script>
+
+</body>
+</html>
