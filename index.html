@@ -262,24 +262,24 @@ font-size:1rem;
     <img src="LogoCH.png" class="logoCH">
     <h3 style="font-family:'Cinzel';letter-spacing:3px">Carmel Events Haifa</h3>
     <p>הרב פרץ חיות 3, חיפה</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.1111!2d34.9912!3d32.8191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDQ5JzA4LjgiTiAzNMKwNTknMjguMyJF!5e0!3m2!1she!2sil!4v1" loading="lazy"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.4836647900735!2d34.9926444!3d32.8059039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dba63242e23d1%3A0x89be1f6046e0a82d!2z16jXkdeZINek16jXpSDXl9eZ15XXqiAzLCDXl9eZ16TXlA!5e0!3m2!1siw!2sil!4v1712683000000!5m2!1siw!2sil" loading="lazy"></iframe>
     <div class="nav-buttons">
         <a href="https://waze.com/ul?q=הרב%20פרץ%20חיות%203%20חיפה&navigate=yes" target="_blank">נווט עם Waze</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=הרב+פרץ+חיות+3+חיפה" target="_blank">פתח ב-Google Maps</a>
+        <a href="https://maps.app.goo.gl/3A6y1KzJ6L7wVvKz5" target="_blank">פתח ב-Google Maps</a>
     </div>
 </div>
 
 <div class="section">
     <h2 style="font-family:'Cinzel'">We can't wait to celebrate!</h2>
-    <p>Kindly complete the RSVP form below</p>
+    <p>Kindly complete the RSVP form below / נשמח לאישור הגעתכם</p>
     <div class="rsvp-form" id="rsvp-container">
         <label>الاسم الكامل / שם מלא *</label>
-        <input type="text" id="name" placeholder="أدخل اسمك الكامل">
+        <input type="text" id="name" placeholder="أدخل اسمك الكامل / הכנס שם מלא">
         
         <label>هل ستتمكن من الحضور؟ / האם תגיע/י?</label>
         <select id="attendance">
-            <option value="כן, אני מגיע/ה">כן, אני מגיע/ה</option>
-            <option value="לצערי לא אוכל להגיע">לצערי לא אוכל להגיע</option>
+            <option value="כן, אני מגיע/ה">نعم، سأحضر / כן, אני מגיע/ה</option>
+            <option value="לצערי לא אוכל להגיע">לצערי לא אוכל להגיע / آسف، لن أتمكن</option>
         </select>
 
         <label>عدد الأشخاص / כמות אנשים</label>
@@ -309,7 +309,7 @@ setInterval(function(){
     document.getElementById("seconds").innerHTML=Math.floor((diff%(1000*60))/1000);
 },1000);
 
-// RSVP Submission to Google Sheets ONLY
+// RSVP Submission
 function submitRSVP(){
     const name = document.getElementById("name").value.trim();
     const attendance = document.getElementById("attendance").value;
@@ -324,8 +324,8 @@ function submitRSVP(){
         guests = 0;
     }
 
-    // הדבק את ה-Web App URL שלך כאן למטה
-    const scriptURL = 'כאן_מדביקים_את_הכתובת_שלך';
+    // קישור ה-Web App שסיפקת
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw04SeL7NgzVZgGVyRJEEGWI1ObIbTSmS7bQ-6pPlVE0g3bhrKdBlx8WDDKmGcGttIU/exec';
 
     const btn = document.querySelector(".rsvp-form button");
     btn.innerText = "...שולח / جاري الإرسال";
@@ -341,7 +341,6 @@ function submitRSVP(){
         })
     })
     .then(() => {
-        // הצגת הודעת הצלחה במקום הטופס
         document.getElementById("rsvp-container").innerHTML = `
             <div style="text-align:center; padding:20px; color:var(--gold); font-weight:bold;">
                 <h3>תודה! תשובתך התקבלה</h3>
@@ -352,7 +351,7 @@ function submitRSVP(){
     .catch(error => {
         console.error('Error!', error.message);
         alert("אירעה שגיאה. נסה שוב.");
-        btn.innerText = "إرسאל / שלח";
+        btn.innerText = "שלח / إرسال";
         btn.disabled = false;
     });
 }
